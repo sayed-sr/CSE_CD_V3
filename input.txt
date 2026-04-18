@@ -1,0 +1,19 @@
+# Smart Home Automation Rules
+
+temp = 35
+motion = detected
+time = night
+
+if temp > 30 then
+    set ac on
+    set fan on
+end
+
+if motion == detected then
+    set camera on
+    set alarm on
+end
+
+scene night
+status
+log

@@ -1,0 +1,87 @@
+╔══════════════════════════════════════╗
+║  Smart Home Automation Rule Engine   ║
+║  Lex + Yacc Compiler Project         ║
+╚══════════════════════════════════════╝
+
+Parsing rules...
+
+  AST: (sensor -> temp=val)
+  → 🌡️  Temperature set to 35°C
+  AST: (sensor -> motion=detected)
+  → 👁️  Motion sensor: DETECTED
+  AST: (sensor -> time=night)
+  → 🌙 Time set to NIGHT
+  AST: (if_stmt -> condition+actions)
+  ✔ Condition TRUE: temp(35) > 30
+  → ❄️  AC turned ON
+  [LOG] AC turned ON by rule
+  → 🌀 Fan turned ON
+  [LOG] Fan turned ON by rule
+  AST: (if_stmt -> condition+actions)
+  ✔ Condition TRUE: motion == detected
+  → 📷 Camera activated
+  [LOG] Camera activated by rule
+  → 🔔 ALARM ACTIVATED!
+  [LOG] Alarm activated by rule
+  AST: (scene -> night)
+  → 🌙 Night Scene activated
+     Lights OFF, Fan ON, Door LOCKED, Camera ON
+  [LOG] Night scene activated
+  AST: (status -> print)
+
+╔══════════════════════════════════════╗
+║        DEVICE STATUS DASHBOARD       ║
+╠══════════════════════════════════════╣
+║  💡 Light     : OFF                 ║
+║  🌀 Fan       : ON                  ║
+║  ❄️  AC        : ON                  ║
+║  🔥 Heater    : OFF                 ║
+║  🔔 Alarm     : ON                  ║
+║  📷 Camera    : ON                  ║
+║  💧 Sprinkler : OFF                 ║
+║  🚪 Door      : LOCKED              ║
+╠══════════════════════════════════════╣
+║         SENSOR READINGS              ║
+╠══════════════════════════════════════╣
+║  🌡️  Temp      : 35°C               ║
+║  💧 Humidity  : 50%                 ║
+║  👁️  Motion    : DETECTED            ║
+║  🔥 Smoke     : CLEAR               ║
+║  🚪 Door Snsr : CLOSED              ║
+╚══════════════════════════════════════╝
+
+  AST: (log -> print)
+
+  ── Event Log (5 entries) ──
+  [01] AC turned ON by rule
+  [02] Fan turned ON by rule
+  [03] Camera activated by rule
+  [04] Alarm activated by rule
+  [05] Night scene activated
+
+════════════ FINAL STATE ════════════
+
+╔══════════════════════════════════════╗
+║        DEVICE STATUS DASHBOARD       ║
+╠══════════════════════════════════════╣
+║  💡 Light     : OFF                 ║
+║  🌀 Fan       : ON                  ║
+║  ❄️  AC        : ON                  ║
+║  🔥 Heater    : OFF                 ║
+║  🔔 Alarm     : ON                  ║
+║  📷 Camera    : ON                  ║
+║  💧 Sprinkler : OFF                 ║
+║  🚪 Door      : LOCKED              ║
+╠══════════════════════════════════════╣
+║         SENSOR READINGS              ║
+╠══════════════════════════════════════╣
+║  🌡️  Temp      : 35°C               ║
+║  💧 Humidity  : 50%                 ║
+║  👁️  Motion    : DETECTED            ║
+║  🔥 Smoke     : CLEAR               ║
+║  🚪 Door Snsr : CLOSED              ║
+╚══════════════════════════════════════╝
+
+Event Log Summary: 5 event(s) recorded.
+
+Compilation & execution complete.
